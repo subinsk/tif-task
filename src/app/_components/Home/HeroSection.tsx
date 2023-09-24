@@ -13,8 +13,8 @@ export const HeroSection: FC = () => {
       <Flex
         order={{ base: 2, md: 1 }}
         direction="column"
-        pl={100}
-        pt={33}
+        pl={{ base: 3, md: 100 }}
+        pt={{ base: 3, md: 33 }}
         gap={111}
       >
         <Image
@@ -36,15 +36,15 @@ export const HeroSection: FC = () => {
           >
             <Text
               textAlign={{ base: "center", md: "left" }}
-              fontSize="62px"
+              fontSize={{ base: 40, md: 62 }}
               color="primary"
-              width={400}
+              width={{ base: 240, md: 400 }}
               fontWeight={700}
             >
               Discover the{" "}
               <Text
                 as="span"
-                fontSize="62px"
+                fontSize={{ base: 40, md: 62 }}
                 color="secondary"
                 fontWeight={700}
               >
@@ -55,7 +55,7 @@ export const HeroSection: FC = () => {
             <Text
               textAlign={{ base: "center", md: "left" }}
               color="body"
-              width="345px"
+              width={{ base: 249, md: 345 }}
               fontSize={16}
             >
               Naturally made Healthcare Products for the better care & support

@@ -59,7 +59,7 @@ export const Articles: FC = () => {
     },
   ];
   return (
-    <Flex direction="column" px={108} py={158} gap={41}>
+    <Flex direction="column" px={{ base: 0, md: 108 }} py={158} gap={41}>
       <Text
         textAlign={{ base: "center", md: "left" }}
         color="primary"
@@ -80,7 +80,7 @@ export const Articles: FC = () => {
                 gap={41}
               >
                 {_items.items.map((item) => (
-                  <Card width={381} key={item.id}>
+                  <Card width={{ base: 330, md: 381 }} key={item.id}>
                     <CardBody>
                       <Image
                         src={item.image}
