@@ -1,6 +1,6 @@
 "use client";
 import { Flex } from "@chakra-ui/react";
-import { About, Articles, HeroSection } from "@/app/_components";
+import { About, Articles, Footer, HeroSection } from "@/app/_components";
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
       <HeroSection />
       <About />
       <Articles />
+      <Footer />
     </Flex>
   );
 }

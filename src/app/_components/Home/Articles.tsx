@@ -59,7 +59,7 @@ export const Articles: FC = () => {
     },
   ];
   return (
-    <Flex direction="column" px={108} py={158}>
+    <Flex direction="column" px={108} py={158} gap={41}>
       <Text color="primary" fontWeight={600} fontSize={56} letterSpacing={2.24}>
         Latest Articles
       </Text>

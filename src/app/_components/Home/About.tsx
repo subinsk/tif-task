@@ -17,15 +17,15 @@ export const About: FC = () => {
       <Flex>
         <Image
           src="/images/food-serving.png"
-          width={384}
-          height={468}
+          width={600}
+          height={800}
           style={{
             flexShrink: 0,
           }}
           alt="serving-food"
         />
       </Flex>
-      <Flex direction="column" gap={21.59}>
+      <Flex direction="column" gap={21.59} py={12}>
         <Flex direction="column" gap={27.41}>
           <Text fontSize="45px" fontWeight="600" color="primary">
             About Us

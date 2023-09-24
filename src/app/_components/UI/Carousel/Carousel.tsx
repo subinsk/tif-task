@@ -49,7 +49,7 @@ export const Carousel: FC<Props> = ({ children }) => {
   };
   const onNext = () => {
     setActiveIndex((prevIndex) =>
-      Math.min(React.Children.count(children), prevIndex + 1)
+      Math.min(React.Children.count(children) - 1, prevIndex + 1)
     );
   };
 
@@ -98,7 +98,7 @@ export const Carousel: FC<Props> = ({ children }) => {
               : "/images/enabled-arrow.svg"
           }
           style={{
-            rotate: activeIndex !== 0 ? "rotate(-180deg)" : undefined,
+            transform: activeIndex !== 0 ? "rotate(-180deg)" : undefined,
           }}
           width={28}
           height={29}
@@ -113,8 +113,8 @@ export const Carousel: FC<Props> = ({ children }) => {
               : "/images/enabled-arrow.svg"
           }
           style={{
-            rotate:
-              activeIndex !== React.Children.count(children) - 1
+            transform:
+              activeIndex === React.Children.count(children) - 1
                 ? "rotate(180deg)"
                 : undefined,
           }}
