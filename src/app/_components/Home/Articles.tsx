@@ -60,14 +60,25 @@ export const Articles: FC = () => {
   ];
   return (
     <Flex direction="column" px={108} py={158} gap={41}>
-      <Text color="primary" fontWeight={600} fontSize={56} letterSpacing={2.24}>
+      <Text
+        textAlign={{ base: "center", md: "left" }}
+        color="primary"
+        fontWeight={600}
+        fontSize={{ base: 28, md: 56 }}
+        letterSpacing={2.24}
+      >
         Latest Articles
       </Text>
       <Flex direction="row">
         <Carousel>
           {data.map((_items, index) => (
             <CarouselItem key={`${index + 1}`}>
-              <Stack direction="row" gap={41}>
+              <Stack
+                direction={{ base: "column", md: "row" }}
+                alignItems={{ base: "center", md: "flex-start" }}
+                p={3}
+                gap={41}
+              >
                 {_items.items.map((item) => (
                   <Card width={381} key={item.id}>
                     <CardBody>
